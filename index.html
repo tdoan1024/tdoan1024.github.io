@@ -1,571 +1,82 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tai Doan — Software Engineer in Seattle, WA." />
+    <meta name="author" content="Tai Doan" />
+
+    <title>Tai Doan — Software Engineer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
-    <title>Tai Doan - Portfolio</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/animate.css" rel="stylesheet" type="text/css" />
-
-    <!-- Custom fonts for this template -->
     <link
       href="vendor/font-awesome/css/font-awesome.min.css"
       rel="stylesheet"
       type="text/css"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic"
-      rel="stylesheet"
-      type="text/css"
-    />
 
-    <!-- Custom styles for this template -->
-    <link href="css/mywebsite.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
 
-    <!-- <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/img/favicon/favicon-16x16.png"
-    /> -->
-    <!--<link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img.icon/favicon-16x16.png">-->
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="img/favicon/ms-icon-144x144.png"
-    />
     <meta name="theme-color" content="#ffffff" />
-      <style type="text/css">
-      </style>
-
   </head>
 
   <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav id="site-nav">
       <div class="container">
-        <a class="navbar-brand" href="#">Tai Doan</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js--about-me js--wp-1" href="#about"
-                >About Me</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Experience
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="nav-link dropdown-item network-name" href="#internship">Internship</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="nav-link dropdown-item network-name" href="#projects">Projects</a>
-                </div>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link js--about-me js--wp-1" href="#extra"
-                >Extracurriculars</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link js--about-me js--wp-1"
-                href="http://tdoan.space/Resume-TDOAN.pdf"
-		        target="pdf-frame"
-                >Resume</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js--about-me js--wp-2" href="#contact"
-                >Contact</a
-              >
-            </li>
-          </ul>
+        <a class="nav-brand" href="#">Tai Doan</a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </button>
+          <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
     </nav>
 
-    <!-- Header -->
-    <header class="intro-header">
-      <div class="animated fadeIn" id="particles-js"></div>
+    <header class="hero">
       <div class="container">
-        <div class="intro-message">
-          <br />
-          <img
-            class="animated fadeIn intro-img img-fluid"
-            src="img/me.png"
-            align="left"
-            alt=""
-            height="25%"
-            width="25%"
-          />
-          <br />
-          <h1 class="animated fadeIn" align="right">Tai Doan</h1>
-          <br />
-          <div class="animated fadeIn container">
-            <div class="col-lg-8 ml-auto">
-              <hr class="intro-divider" align="left" />
-            </div>
-            <div class="col-lg-8 ml-auto" align="left">
-                <h3>Seattle Pacific University : : Computer Engineering</h3>
-              <h4>I enjoy <span class="typed"></span></h4>
-            </div>
-            <div class="col-lg-8 ml-auto">
-              <hr class="intro-divider" />
-            </div>
-          </div>
-
-          <ul
-            class="animated fadeIn list-inline intro-social-buttons"
-            style="pointer-events: none"
-          >
-            <li class="list-inline-item">
-              <a
-                href="https://www.linkedin.com/in/tai-doan-1024"
-                target="_blank"
-                class="btn btn-secondary btn-lg"
-                style="pointer-events: all"
-              >
-                <i class="fa fa-linkedin fa-fw"></i>
-                <span class="network-name"><a target="_blank"></a> </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                href="https://github.com/tdoan1024"
-                target="_blank"
-                class="btn btn-secondary btn-lg"
-                style="pointer-events: all"
-              >
-                <i class="fa fa-github fa-fw"></i>
-                <span class="network-name"><a target="_blank"></a> </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                href="mailto:tdoan1024@gmail.com"
-                target="_blank"
-                class="btn btn-secondary btn-lg"
-                style="pointer-events: all"
-              >
-                <i class="fa fa-envelope fa-fw"></i>
-                <span class="network-name"><a target="_blank"></a> </span>
-              </a>
-            </li>
-          </ul>
+        <p class="hero-eyebrow">Seattle, WA</p>
+        <h1>Tai Doan</h1>
+        <p class="hero-tagline">
+          I enjoy <span id="hero-role">building web platforms</span>
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="resume.pdf" target="_blank" rel="noopener">
+            <i class="fa fa-file-text-o" aria-hidden="true"></i> Resume
+          </a>
+          <a class="btn btn-secondary" href="#contact">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i> Get in touch
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/tai-doan-1024" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/tdoan1024" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:tdoan1024@gmail.com" aria-label="Email">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </header>
 
-    <!-- Introduction-->
-    <section class="content-section-a" id="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg ml-auto">
-            <h2 class="section-heading">
-              <i class="fa fa-cube fa-fw"></i> Hello. Xin Chao.
-            </h2>
-            <hr class="divider" />
-            <p class="lead">
-              I am a recent grad Software Engineer based in Seattle, Washington specializing in designing and developing
-              high-quality and efficient web applications and embedded systems software.
-            </p>
-
-            <p class="lead">
-              I graduated from Seattle Pacific Univeristy with a Bachelor degree in Computer Engineering.
-              . My professional experience has been marked by 
-              successful problem solving, team collaboration, and expertise in software and firmware engineering.
-            </p>
-
-            <p class="lead">
-              I love spending time on optimizing my work and learning new technology.
-              Additionally, I am always excited to explore new opportunities.
-            </p>
-          </div>
-          <!-- <div class="col-lg mr-auto">
-            <img class="img-fluid" src="img/spu.jpg" alt="" />
-          </div> -->
-        </div>
-
-        <hr class="divider" />
-
-         <div class="row">
-             <div class="col-lg-6 mr-auto">
-                 <p class="lead">
-                   <h5>Objective</h5>
-                     <!--<blockquote style="margin-right: 0ptx;" dir="ltr">-->
-                         <p class="lead"><i>
-                          To advance my career with a leading organization that will utilize my extensive software and firmware 
-                          engineering knowledge while also allowing me to develop further as a professional
-                         </i></p>
-                 </p>
-             </div>
-             <div class="col-lg-6 mr-auto">
-                 <p class="lead">
-                   <h5>My Values</h5>
-                     <!--<blockquote style="margin-right: 0ptx;" dir="ltr" />-->
-                         <p class="lead">
-                         <b>Innovation</b> - My success is based on meaningful contributions toward the improvement of society through engineering research and development.
-                         </p>
-                         <hr class="divider" />
-                         <p class="lead">
-                         <b>Excellence</b> - I strive for excellence in all that I do. Anything less than my best effort is unacceptable.
-                         </p>
-                         <hr class="divider" />
-                         <p class="lead">
-                         <b>Ethics</b> - My activities and relationships are based on integrity, respect and fairness.
-                         </p>
-                         <hr class="divider" />
-                         <p class="lead">
-                         <b>Responsibility</b> - I am socially, environmentally and economically responsible in my actions
-                         </p>
-                 </p>
-             </div>
-         </div>
-      </div>
-    </section>
-
-    <!--/. Internship-->
-    <section class="content-section-b" id="internship">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg ml-auto">
-            <h2 class="section-heading">
-              <i class="fa fa-code fa-fw"></i> My Internship Expperience
-            </h2>
-            <hr class="divider" />
-            <p class="lead">
-            I was interning at Bellmont Cabinets Co. as a Software
-              Developer in the Shop Application team. I have designed and built 3 web applications in <strong>C#</strong>, <strong>HTML</strong>, <strong>JavaScript</strong> and <strong>SQL</strong> with <strong>ASP.NET MVC framwork</strong>. These are used out in their factory operations.
-                <br />
-                <ul class="lead">
-                    Other responsibilities include:
-                    <li>Write supporting code for existing web applications to improve work performance of employees in the factory</li>
-                    <li>Create, update and query data in the existing <b>SQL databases</b> that are utilized by the data visualizations and tools</li>
-                    <li>Collaborate with the team following Agile/Scrum practices using <strong>JIRA</strong> project development tracking software</li>
-                </ul>
-            </p>
-          </div>
-          <div class="col-lg mr-auto">
-              <a href="https://www.bellmontcabinets.com/" target="_blank">
-                  <img class="img-fluid"
-                       width="100%"
-                       src="img/bellmont.png"
-                       alt=""
-                       style="border-radius: 0 !important; padding: 5px; padding-left: 32px" />
-              </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!--/.Projects-->
-    <section class="content-section-b" id="projects">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg ml-auto">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">
-                    <i class="fa fa-gear fa-fw"></i> Projects
-                </h2>
-                <!-- Template for each project -->
-                <hr class="divider" />
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <a href="https://github.com/tdoan1024/Gro-bot"
-                           class="lead"
-                           style="color:black">
-                            <h5>
-                                Grobot - Senior Capstone Project
-                                <img class="img-fluid"
-                                     src="img/GrobotLogo.png"
-                                     alt=""
-                                     width="10%"
-                                 />
-                            </h5>
-                        </a>
-                        <p class="lead">I am collaborating with a team to design and build an automated gardening system. I am responsible for programming embedded system and creating an User-Interface application for user's input and feedback data</p>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-
-                        <img class="img-fluid"
-                             src="img/GrobotMain.png"
-                             alt=""
-                             width="100%"
-                             style="margin-left: 15%" />
-
-                    </div>
-                </div>
-                <!-- End each project -->
-                <hr class="divider" />
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <a href="https://github.com/tdoan1024/BikeGuard"
-                           class="lead"
-                           style="color:black">
-                            <h5>BIKEGUARD</h5>
-                        </a>
-                        <p class="lead">I collaborated with a team to design a device to prevent bike theft by sending notifications and GPS location to the owner using narrow band signal</p>
-                    </div>
-                </div>
-
-                <hr class="divider" />
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <a href="https://github.com/tdoan1024/CountItFirst"
-                           class="lead"
-                           style="color:black">
-                            <h5>Count-It-First</h5>
-                        </a>
-                        <p class="lead">I collaborated with a team to design a server-client based counting game using Python and TCP socket connection protocol</p>
-                    </div>
-                </div>
-
-                <hr class="divider" />
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <a href="https://devpost.com/software/parking-tracker-7ycqif"
-                           class="lead"
-                           style="color:black">
-                            <h5>Parking Tracker - NB-IoT Hackathon</h5>
-                        </a>
-                        <p class="lead">I worked with a team and utilized the knowledge of Narrowband - Internet of Things technology to create a system that can check location and occupancy of parking spots; and keep track of parking time by sending notification over text messages</p>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6">
-                        <img class="img-fluid"
-                             src="img/NBIOT.jpg"
-                             alt=""
-                             width="50%"
-                             style="margin-left: 15%" />
-                    </div>
-                </div>
-
-                <hr class="divider" />
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <a href="https://github.com/tdoan1024/Convert"
-                           class="lead"
-                           style="color:black">
-                            <h5>Number Converter</h5>
-                        </a>
-                        <p class="lead">I created a program that allows the user to convert numbers among Binary, Decimal, Octal and Hexadecimal using C++</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- /.Additional experience -->
-
-    <section class="content-section-b" id="extra">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg ml-auto">
-                <h2 class="section-heading">
-                    <i class="fa fa-group fa-fw"></i> Extracurriculars
-                </h2>
-                <hr class="divider" />
-                <a href="https://www.ieee.org/"
-                   class="lead"
-                   style="color:black">
-                    <h5>SPU IEEE 2019-2020 Officer</h5>
-                </a>
-                <p class="lead">Seattle Pacific University</p>
-                <hr />
-
-                <h5>Athletic Event Staff</h5>
-                <p class="lead">
-                    Seattle Pacific University
-                    <br />
-                    2018-Current
-                </p>
-                <hr />
-
-                <a href="https://mrc.highline.edu/"
-                   class="lead"
-                   style="color:black">
-                    <h5>Math Tutor</h5>
-                </a>
-                <p class="lead">
-                    Highline College - Math Resource Center
-                    <br />
-                    2015-2017
-                </p>
-            </div>
-          <div class="col-lg mr-auto ">
-            <img class="img-fluid" src="img/IEEE.png" alt="" width="50%"/>
-              <br />
-            <img class="img-fluid" src="img/falcon.jpg" alt="" width="30%" />
-            <img
-              class="img-fluid"
-              src="img/highline.png"
-              alt=""
-              width="50%"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!--/.Personal stuff to share: Foodile IG page, soccer team, PC build-->
-    <section class="content-section-a" id="interest">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg ml-auto">
-                <h2 class="section-heading">
-                    <i class="fa fa-play fa-fw"></i> Interests
-                </h2>
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <h5>Soccer <i class="fa fa-futbol-o"></i></h5>
-                        <p class="lead">
-                            I played soccer once a week besides my time for working and studying. My team has placed 2nd in 8v8 Men Recreational Tournament in Fall 2019 @Starfire Sports
-                        </p>
-                    </div>
-                    <div class="col-lg mr-auto">
-                            <img class="img-fluid"
-                                 src="img/ASRoma.png"
-                                 alt=""
-                                 width="80%"
-                                 style="margin-left: 15%" />
-                        <br />
-                        <br />
-                            <img class="img-fluid"
-                                 src="img/Juventus.png"
-                                 alt=""
-                                 width="80%"
-                                 style="margin-left: 15%" />
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-      <!-- /.container -->
-    </section>
-
-    <!-- /.Contact info -->
-
-    <aside class="banner" id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg mr-auto">
-            <h2>Let's connect.</h2>
-            <br />
-            <ul class="list-inline intro-social-buttons">
-              <li class="list-inline-item">
-                <a
-                  href="https://www.linkedin.com/in/tai-doan-1024"
-                  target="_blank"
-                  class="btn btn-secondary btn-lg"
-                >
-                  <i class="fa fa-linkedin fa-fw"></i>
-                  <span class="network-name"
-                    >LinkedIn<a target="_blank"></a>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a
-                  href="https://github.com/tdoan1024"
-                  target="_blank"
-                  class="btn btn-secondary btn-lg"
-                >
-                  <i class="fa fa-github fa-fw"></i>
-                  <span class="network-name"
-                    >GitHub<a target="_blank"></a>
-                  </span>
-                </a>
-              </li>
-
-              <!--<li class="list-inline-item">
-                <a
-                  href="https://www.instagram.com/thd____/"
-                  target="_blank"
-                  class="btn btn-secondary btn-lg"
-                >
-                  <i class="fa fa-instagram fa-fw"></i>
-                  <span class="network-name"
-                    >Instagram<a target="_blank"></a>
-                  </span>
-                </a>
-              </li>-->
-              <li class="list-inline-item">
-                <a
-                  href="mailto:tdoan1024@gmail.com"
-                  target="_blank"
-                  class="btn btn-secondary btn-lg"
-                >
-                  <i class="fa fa-envelope fa-fw"></i>
-                  <span class="network-name"
-                    >Email<a target="_blank"></a>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- /.container -->
-    </aside>
-    <!-- /.banner -->
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <li class="list-inline-item">
-          <a href="#" class="btn btn-secondary btn-lg">
-            <span class="network-name">Home </span>
-          </a>
-        </li>
-
-        <p class="copyright text-muted small">
-          Designed by Tai Doan, 2019.
-        <br />
-            All credits for the logos go to their respective owners.
-        </p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.js"></script>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="js/typeme.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- sections continue in Task 3 -->
   </body>
 </html>
