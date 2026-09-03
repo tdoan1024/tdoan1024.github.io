@@ -124,6 +124,14 @@ is a follow-up pass (see Phasing).
 - Theme toggle: smooth color-scheme transition
 - All motion respects `prefers-reduced-motion: reduce`
 
+## Note: domain renewal (external, not a code change)
+
+`CNAME` points to `www.tdoan.dev`, and that domain has expired. Renewing it is
+a registrar/billing action outside this repo — user needs to renew directly
+with their registrar, then confirm DNS (CNAME `www` → GitHub Pages,
+optionally apex A records) still points correctly. No code change needed here
+unless the domain changes.
+
 ## Out of scope
 
 - No CMS, no build tooling/framework, no 3D/WebGL effects
