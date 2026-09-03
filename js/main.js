@@ -1,9 +1,14 @@
+document.documentElement.classList.add('js');
+
 // ---------- Theme toggle ----------
 function initThemeToggle() {
   var root = document.documentElement;
   var toggle = document.getElementById('theme-toggle');
   var icon = toggle.querySelector('i');
-  var stored = localStorage.getItem('theme');
+  var stored = null;
+  try {
+    stored = localStorage.getItem('theme');
+  } catch (e) {}
   var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   var current = stored || (prefersDark ? 'dark' : 'light');
 
@@ -11,7 +16,9 @@ function initThemeToggle() {
 
   toggle.addEventListener('click', function () {
     current = current === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', current);
+    try {
+      localStorage.setItem('theme', current);
+    } catch (e) {}
     applyTheme(current);
   });
 
@@ -112,7 +119,7 @@ function initHeroRole() {
 
   var roleIndex = 0;
   var charIndex = roles[0].length;
-  var deleting = false;
+  var deleting = true;
 
   function tick() {
     var word = roles[roleIndex];

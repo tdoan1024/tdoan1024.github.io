@@ -22,6 +22,18 @@
 
     <link href="css/styles.css" rel="stylesheet" />
 
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
   </head>
@@ -167,7 +179,7 @@
                 HTML/CSS/JS single page with a light/dark design system and
                 subtle scroll and hover motion.
               </p>
-              <a class="card-link" href="https://github.com/tdoan1024/tdoan1024.github.io" target="_blank" rel="noopener">
+              <a class="card-link" href="https://github.com/tdoan1024/tdoan.github.io" target="_blank" rel="noopener">
                 View on GitHub <i class="fa fa-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
