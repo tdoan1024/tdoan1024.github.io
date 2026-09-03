@@ -9,7 +9,22 @@ a clean, fast, professional portfolio with subtle, tasteful motion. Lead with
 professional credibility (current engineering role, real impact) while keeping
 a personal/interests section for personality.
 
-## Content updates
+## Phasing
+
+This redesign is split into two passes:
+
+1. **Structure/visual redesign (this implementation pass):** rebuild the site
+   with the new architecture, layout, design system, and animations described
+   below. Content is carried over largely as-is from the current site
+   (placeholder-quality) into the new structure/sections — the goal is to get
+   the shape, look, and motion right first.
+2. **Content update (follow-up pass, not part of this plan):** once the
+   structure is approved, revisit and finalize the actual copy — experience
+   entries, project descriptions, resume file, interests — informed by the
+   updated resume. Tracked separately; do not block structural work on
+   content decisions.
+
+## Content updates (reference for the follow-up pass)
 
 Current site content is stale (still reads "recent grad", features the
 Bellmont Cabinets internship as the primary experience). Updated content comes
@@ -87,6 +102,10 @@ visual direction without extra tooling overhead.
 
 ## Page structure (in order)
 
+Content below is placeholder-quality for this pass — carried over from the
+current site's copy, restructured into the new sections/design. Final copy
+is a follow-up pass (see Phasing).
+
 1. **Hero** — name, title/tagline, short one-liner, rotating role text,
    social links, resume button (links to `resume.pdf`), scroll cue
 2. **About** — condensed version of current About copy
@@ -111,3 +130,5 @@ visual direction without extra tooling overhead.
 - No new projects beyond Grobot/BikeGuard/this rebuild for now (user is
   planning future projects to add later)
 - No blog or additional pages beyond the single-page portfolio
+- Final content/copy update (resume swap, rewritten experience/project copy)
+  — deferred to the follow-up pass described in Phasing
