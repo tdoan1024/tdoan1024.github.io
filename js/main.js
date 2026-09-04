@@ -106,10 +106,10 @@ function initHeroRole() {
   var el = document.getElementById('hero-role');
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var roles = [
-    'building web platforms',
-    'solving hard problems',
+    'solving challenging problems',
     'learning new technology',
-    'collaborating with great teams'
+    'connecting over big ideas',
+    'staying active outdoors'
   ];
 
   if (reduceMotion) {
@@ -253,9 +253,86 @@ function initHeroParticles() {
   themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 }
 
+// ---------- Projects carousel ----------
+function initProjectsCarousel() {
+  var wrapper = document.querySelector('.carousel-track-wrapper');
+  var track = document.getElementById('carousel-track');
+  var slides = Array.prototype.slice.call(track.querySelectorAll('.carousel-slide'));
+  var dots = document.querySelectorAll('#carousel-dots .carousel-dot');
+  var prevBtn = document.getElementById('carousel-prev');
+  var nextBtn = document.getElementById('carousel-next');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current = Math.floor((slides.length - 1) / 2);
+
+  if (reduceMotion) {
+    track.style.transition = 'none';
+  }
+
+  function update() {
+    var slide = slides[current];
+    var offset = wrapper.clientWidth / 2 - (slide.offsetLeft + slide.offsetWidth / 2);
+    track.style.transform = 'translateX(' + offset + 'px)';
+
+    slides.forEach(function (s, i) {
+      s.classList.toggle('is-active', i === current);
+    });
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+    update();
+  }
+
+  prevBtn.addEventListener('click', function () { goTo(current - 1); });
+  nextBtn.addEventListener('click', function () { goTo(current + 1); });
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { goTo(i); });
+  });
+  slides.forEach(function (slide, i) {
+    slide.addEventListener('click', function (e) {
+      if (i === current || e.target.closest('a')) return;
+      goTo(i);
+    });
+  });
+
+  window.addEventListener('resize', update);
+  window.addEventListener('load', update);
+
+  update();
+}
+
+// ---------- Card cursor tilt ----------
+function initCardTilt() {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) return;
+
+  var maxTilt = 8;
+  var cards = document.querySelectorAll('.card, .interest-card');
+
+  cards.forEach(function (card) {
+    card.addEventListener('mousemove', function (e) {
+      var rect = card.getBoundingClientRect();
+      var px = (e.clientX - rect.left) / rect.width - 0.5;
+      var py = (e.clientY - rect.top) / rect.height - 0.5;
+      card.style.setProperty('--tilt-x', (px * maxTilt * 2).toFixed(2) + 'deg');
+      card.style.setProperty('--tilt-y', (-py * maxTilt * 2).toFixed(2) + 'deg');
+    });
+
+    card.addEventListener('mouseleave', function () {
+      card.style.setProperty('--tilt-x', '0deg');
+      card.style.setProperty('--tilt-y', '0deg');
+    });
+  });
+}
+
 initThemeToggle();
 initMobileNav();
 initScrollNav();
 initScrollReveal();
 initHeroRole();
 initHeroParticles();
+initProjectsCarousel();
+initCardTilt();
