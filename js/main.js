@@ -84,25 +84,3 @@ document.addEventListener('keydown', event => {
     menu.focus();
   }
 });
-
-const themeToggle = document.getElementById('theme-toggle');
-function applyTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  const light = theme === 'light';
-  const label = light ? 'Use dark mode' : 'Use light mode';
-  themeToggle.setAttribute('aria-label', label);
-  themeToggle.title = label;
-  themeToggle.querySelector('span').textContent = light ? '☾' : '☼';
-  document.querySelector('meta[name="theme-color"]').content = light ? '#f5f5f0' : '#191919';
-}
-let initialTheme = 'dark';
-try {
-  if (localStorage.getItem('theme') === 'light') initialTheme = 'light';
-} catch { /* Storage can be disabled. */ }
-applyTheme(initialTheme);
-themeToggle.hidden = false;
-themeToggle.addEventListener('click', () => {
-  const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-  applyTheme(theme);
-  try { localStorage.setItem('theme', theme); } catch { /* Still works for this visit. */ }
-});

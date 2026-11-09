@@ -8,7 +8,7 @@
   <title>hi, i'm tai</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Pixelify+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Pixelify+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
   <script src="js/main.js" defer></script>
 </head>
@@ -17,9 +17,6 @@
   <header class="site-header wrap">
     <div class="brand-controls">
       <a class="wordmark pixel" href="#home" aria-label="Tai Doan, home">td.</a>
-      <button id="theme-toggle" type="button" aria-label="Use light mode" title="Use light mode" hidden>
-        <span aria-hidden="true">☼</span>
-      </button>
     </div>
     <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" hidden>Menu</button>
     <nav id="nav-links" aria-label="Main navigation">
@@ -36,8 +33,12 @@
         <a class="text-link" href="#experience">A little about my work <span aria-hidden="true">↘</span></a>
       </div>
       <div class="character-scene">
-        <div class="character" role="img" aria-label="Pixel illustration of an Asian developer typing at his computer"></div>
-        <p class="character-caption pixel" aria-hidden="true">one line at a time.</p>
+        <img class="tulip" src="img/pixel-tulip.png" width="1024" height="1536" alt="" />
+        <svg class="pixel-grass" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 18" preserveAspectRatio="none" shape-rendering="crispEdges">
+  <path fill="#675034" d="M9 12h38v-2h70V9h166v1h46v2h24v2h-47v2h-86v2h-79v-2H72v-2H9z"/>
+  <path fill="#098a5d" d="M0 11h20V9h34v1h22V8h66V7h110v2h57v1h35v2h-45v1h-56v-2H125v1H61v1H22v-1H0z"/>
+  <path fill="#38e6a0" d="M23 10V6h2v2h4V4h2v6zm46 0V6h3V3h2v7zm37-2V4h2v2h3V1h2v7zm29 0V4h3v4zm128 2V6h3V3h2v7zm33 1V7h2V5h2v4h3V4h2v7zm31 0V8h3v3z"/>
+</svg>
       </div>
       <div class="conversation" id="conversation">
         <div class="dialogue-header"><span class="pixel">A little conversation</span><span class="dialogue-note">Answers from my bio</span></div>
