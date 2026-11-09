@@ -1,288 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Tai Doan — Software Engineer in Seattle, WA." />
-    <meta name="author" content="Tai Doan" />
-
-    <title>Tai Doan - Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="vendor/font-awesome/css/font-awesome.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-
-    <link href="css/styles.css" rel="stylesheet" />
-
-    <script>
-      (function () {
-        try {
-          var stored = localStorage.getItem('theme');
-          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          if (stored === 'dark' || (!stored && prefersDark)) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-          }
-        } catch (e) {}
-      })();
-    </script>
-
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="theme-color" content="#ffffff" />
-  </head>
-
-  <body>
-    <nav id="site-nav">
-      <div class="container">
-        <a class="nav-brand" href="#">Tai Doan</a>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#interests">Interests</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-          <button id="theme-toggle" aria-label="Toggle dark mode">
-            <i class="fa fa-moon-o" aria-hidden="true"></i>
-          </button>
-          <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tai Doan — Software Engineer in Seattle. Building thoughtful experiences and reliable systems." />
+  <meta name="theme-color" content="#191919" />
+  <title>hi, i'm tai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Pixelify+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <div class="brand-controls">
+      <a class="wordmark pixel" href="#home" aria-label="Tai Doan, home">td.</a>
+      <button id="theme-toggle" type="button" aria-label="Use light mode" title="Use light mode" hidden>
+        <span aria-hidden="true">☼</span>
+      </button>
+    </div>
+    <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" hidden>Menu</button>
+    <nav id="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      <a href="Resume_TDOAN.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a>
     </nav>
-
-    <header class="hero">
-      <canvas id="hero-particles" aria-hidden="true"></canvas>
-      <div class="container">
-        <p class="hero-eyebrow">Hi, my name is</p>
-        <h1>Tai Doan</h1>
-        <p class="hero-tagline">
-          Glad you're here —<br />
-          I'm a Software Engineer based in Seattle, WA.
-        </p>
-        <p class="hero-tagline">
-          I enjoy <span id="hero-role">solving challenging problems</span>
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="Resume_TDOAN.pdf" target="_blank" rel="noopener">
-            <i class="fa fa-file-text-o" aria-hidden="true"></i> Resume
-          </a>
-          <a class="btn btn-secondary" href="#contact">
-            <i class="fa fa-envelope-o" aria-hidden="true"></i> Get in touch
-          </a>
-        </div>
-        <div class="hero-socials">
-          <a href="https://www.linkedin.com/in/tai-doan-1024" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/tdoan1024" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="mailto:tdoan1024@gmail.com" aria-label="Email">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-          </a>
-        </div>
+  </header>
+  <main id="main" class="wrap">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-intro">
+        <p class="eyebrow">Software engineer / Seattle, WA</p>
+        <h1 id="hero-title" class="pixel">Hey, I'm Tai<span class="cursor" aria-hidden="true">_</span></h1>
+        <p class="hero-description">I build thoughtful experiences<br class="desktop-break" /> and systems that work.</p>
+        <a class="text-link" href="#experience">A little about my work <span aria-hidden="true">↘</span></a>
       </div>
-    </header>
-
-    <section id="about">
-      <div class="container">
-        <h2 class="section-heading"><i class="fa fa-cube" aria-hidden="true"></i> About</h2>
-        <p class="section-subheading">A bit of background</p>
-        <p>
-          I'm a Software Engineer at Nordstrom, building customer-facing
-          experiences and large-scale platforms used by millions of
-          customers. My work spans full-stack development, system design,
-          and cross-functional collaboration to ship reliable, scalable
-          features.
-        </p>
-        <p>
-          I graduated from Seattle Pacific University with a Bachelor's
-          degree in Computer Engineering, and have been building software
-          professionally since — from early web applications to today's
-          distributed, cloud-based systems.
-        </p>
-        <p>
-          Lately I'm focused on AI-assisted engineering — using tools like
-          Claude Code and agentic workflows to build faster and reason more
-          clearly about system design. I enjoy learning new technology,
-          solving hard problems, and exploring new opportunities.
-        </p>
+      <div class="character-scene">
+        <div class="character" role="img" aria-label="Pixel illustration of an Asian developer typing at his computer"></div>
+        <p class="character-caption pixel" aria-hidden="true">one line at a time.</p>
+      </div>
+      <div class="conversation" id="conversation">
+        <div class="dialogue-header"><span class="pixel">A little conversation</span><span class="dialogue-note">Answers from my bio</span></div>
+        <p id="answer" role="status" aria-live="polite" aria-atomic="true">Hey, welcome to my corner of the internet. What would you like to know?</p>
+        <div class="question-list" aria-label="Suggested questions">
+          <button type="button" data-topic="work">What do you work on? <span aria-hidden="true">↗</span></button>
+          <button type="button" data-topic="learning">What are you learning? <span aria-hidden="true">↗</span></button>
+          <button type="button" data-topic="outside">Outside of work? <span aria-hidden="true">↗</span></button>
+        </div>
+        <form id="ask-form">
+          <label class="sr-only" for="question">Ask about Tai</label><span class="prompt-mark" aria-hidden="true">&gt;</span>
+          <input id="question" name="question" placeholder="Ask me something…" maxlength="240" autocomplete="off" required />
+          <button class="send-button" type="submit" aria-label="Send question">↵</button>
+        </form>
+        <noscript><p class="no-script">The conversation needs JavaScript. You can read about me below.</p></noscript>
       </div>
     </section>
-
-    <section id="experience">
-      <div class="container">
-        <h2 class="section-heading"><i class="fa fa-code" aria-hidden="true"></i> Experience</h2>
-        <p class="section-subheading">Where I've worked</p>
-        <div class="timeline">
-          <div class="timeline-item reveal">
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <h2 id="about-title" class="pixel">A bit about me</h2>
+      <div class="about-copy">
+        <p>I'm a software engineer at Nordstrom. Outside of work, I play soccer, run, and snowboard in the Cascades.</p>
+      </div>
+    </section>
+    <section id="experience" class="section" aria-labelledby="experience-title">
+      <div class="section-top"><h2 id="experience-title" class="pixel">Experience</h2><a class="quiet-link" href="Resume_TDOAN.pdf" target="_blank" rel="noopener">Full resume ↗</a></div>
+      <div class="experience-list">
+        <article class="experience-row">
+          <div class="experience-main">
             <h3>Nordstrom</h3>
-            <p class="timeline-meta">Seattle, WA &middot; January 2022 &ndash; Current</p>
-            <div class="timeline-roles">
-              <div class="timeline-role">
-                <h4>Software Engineer 2</h4>
-                <p class="timeline-role-meta">March 2024 &ndash; Current</p>
-                <p>
-                  Design and build customer-facing experiences and
-                  large-scale services powering product discovery on
-                  Nordstrom's website and iOS app. Lead technical discovery
-                  for content monetization, partnering with marketing and
-                  data science to improve targeting and content relevance.
-                </p>
-              </div>
-              <div class="timeline-role">
-                <h4>Software Engineer</h4>
-                <p class="timeline-role-meta">January 2022 &ndash; February 2024</p>
-                <p>
-                  Built vendor-integrated applications displaying sponsored
-                  products across Nordstrom's web and app platforms,
-                  supporting millions of monthly active customers. Automated
-                  data pipelines for ad campaign reporting and reduced
-                  operational costs through reliability improvements.
-                </p>
-              </div>
-            </div>
+            <p class="role">Software Engineer</p>
+            <p class="work-description">Customer experiences, product discovery, and services at scale.</p>
           </div>
-          <div class="timeline-item reveal">
-            <h3>Software Development Engineer</h3>
-            <p class="timeline-meta">FreeLock Computing &middot; Seattle, WA &middot; Jan 2021 &ndash; Dec 2021</p>
-            <p>
-              Designed and developed websites using Drupal and WordPress
-              with PHP and JavaScript. Partnered with clients to deliver
-              cost-effective technical solutions on time.
-            </p>
-          </div>
-          <div class="timeline-item reveal">
-            <h3>Software Engineer Intern</h3>
-            <p class="timeline-meta">Bellmont Cabinets Co. &middot; Sumner, WA &middot; Jun 2019 &ndash; Mar 2020</p>
-            <p>
-              Designed and built web applications with the ASP.NET MVC
-              framework, C#, HTML, JavaScript, and SQL, used in the
-              company's factory operations.
-            </p>
-          </div>
-          <div class="timeline-item reveal">
-            <h3>Math Tutor</h3>
-            <p class="timeline-meta">Highline College Math Resource Center &middot; Des Moines, WA &middot; Dec 2015 &ndash; Jun 2017</p>
-            <p>
-              Tutored students in math courses one-on-one and in small
-              groups, helping them build problem-solving skills and
-              confidence.
-            </p>
-          </div>
-        </div>
+          <p class="dates">2022 — Present</p>
+        </article>
+        <article class="experience-row">
+          <div class="experience-main"><h3>FreeLock Computing</h3><p class="role">Software Development Engineer</p><p class="work-description">Websites and applications built around client needs.</p></div><p class="dates">2021</p>
+        </article>
+        <article class="experience-row">
+          <div class="experience-main"><h3>Bellmont Cabinets</h3><p class="role">Software Engineer Intern</p><p class="work-description">Web applications for factory operations.</p></div><p class="dates">2019 — 2020</p>
+        </article>
       </div>
     </section>
-
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-heading"><i class="fa fa-gears" aria-hidden="true"></i> Projects</h2>
-        <p class="section-subheading">Things I've built</p>
-        <div class="carousel">
-          <button class="carousel-arrow carousel-prev" id="carousel-prev" aria-label="Previous project">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-          </button>
-          <div class="carousel-track-wrapper">
-            <div class="carousel-track" id="carousel-track">
-              <article class="card carousel-slide">
-                <img src="img/GrobotMain.png" alt="Grobot automated gardening system" />
-                <div class="card-body">
-                  <h3>Grobot &mdash; Senior Capstone Project</h3>
-                  <p>
-                    Collaborated with a team to design and build an automated
-                    gardening system. Responsible for the embedded system
-                    programming and the user-interface application for input
-                    and feedback data.
-                  </p>
-                  <a class="card-link" href="https://github.com/tdoan1024/Gro-bot" target="_blank" rel="noopener">
-                    View on GitHub <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </article>
-              <article class="card carousel-slide">
-                <div class="card-body">
-                  <h3>BikeGuard</h3>
-                  <p>
-                    Collaborated with a team to design a device that prevents
-                    bike theft by sending notifications and GPS location to
-                    the owner over a narrowband signal.
-                  </p>
-                  <a class="card-link" href="https://github.com/tdoan1024/BikeGuard" target="_blank" rel="noopener">
-                    View on GitHub <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-          <button class="carousel-arrow carousel-next" id="carousel-next" aria-label="Next project">
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-          </button>
-        </div>
-        <div class="carousel-dots" id="carousel-dots">
-          <button class="carousel-dot active" aria-label="Go to project 1"></button>
-          <button class="carousel-dot" aria-label="Go to project 2"></button>
-        </div>
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div><h2 id="contact-title" class="pixel">Let's talk.</h2><p>Always up for a good conversation.</p></div>
+      <div class="contact-links">
+        <a href="mailto:tdoan1024@gmail.com">Email</a>
+        <a href="https://github.com/tdoan1024" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/tai-doan-1024" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </section>
-
-    <section id="interests">
-      <div class="container">
-        <h2 class="section-heading"><i class="fa fa-heart-o" aria-hidden="true"></i> Interests</h2>
-        <p class="section-subheading">Outside of work</p>
-        <div class="interest-grid">
-          <div class="interest-card reveal">
-            <span class="interest-emoji" aria-hidden="true">⚽</span>
-            <h3>Soccer</h3>
-            <p>I play in weekly pickup games and catch professional matches live whenever I can.</p>
-          </div>
-          <div class="interest-card reveal">
-            <span class="interest-emoji" aria-hidden="true">👟</span>
-            <h3>Running</h3>
-            <p>Training for my first marathon.</p>
-          </div>
-          <div class="interest-card reveal">
-            <span class="interest-emoji" aria-hidden="true">🏂</span>
-            <h3>Snowboarding</h3>
-            <p>Chasing fresh snow in the Cascades.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-heading"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Let's connect</h2>
-        <p class="section-subheading">I'm always open to new opportunities and conversations.</p>
-        <div class="hero-socials">
-          <a href="https://www.linkedin.com/in/tai-doan-1024" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/tdoan1024" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="mailto:tdoan1024@gmail.com" aria-label="Email">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <p>&copy; 2026 Tai Doan. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-  </body>
+  </main>
+  <footer class="wrap"><span>© 2026 Tai Doan</span></footer>
+</body>
 </html>
