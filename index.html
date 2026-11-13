@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Tai Doan — Software Engineer in Seattle. Building thoughtful experiences and reliable systems." />
-  <meta name="theme-color" content="#191919" />
+  <meta name="theme-color" content="#f8f5ef" />
   <title>hi, i'm tai</title>
+  <link rel="icon" type="image/png" href="img/favicon-td.png" />
+  <script>
+    try {
+      if (localStorage.getItem('portfolio-theme') === 'dark') {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    } catch {}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=VT323&family=Pixelify+Sans:wght@400;500&display=swap" rel="stylesheet" />
@@ -17,8 +25,9 @@
   <header class="site-header wrap">
     <div class="brand-controls">
       <a class="wordmark pixel" href="#home" aria-label="Tai Doan, home">td.</a>
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false" hidden><span aria-hidden="true">☀</span></button>
     </div>
-    <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" hidden>Menu</button>
+    <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Open menu" hidden><span></span><span></span><span></span></button>
     <nav id="nav-links" aria-label="Main navigation">
       <a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
       <a href="Resume_TDOAN.pdf" target="_blank" rel="noopener">Resume <span aria-hidden="true">↗</span></a>

@@ -69,12 +69,12 @@ menu.hidden = false;
 menu.addEventListener('click', () => {
   const open = menu.getAttribute('aria-expanded') !== 'true';
   menu.setAttribute('aria-expanded', String(open));
-  menu.textContent = open ? 'Close' : 'Menu';
+  menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   nav.classList.toggle('is-open', open);
 });
 function closeMenu() {
   menu.setAttribute('aria-expanded', 'false');
-  menu.textContent = 'Menu';
+  menu.setAttribute('aria-label', 'Open menu');
   nav.classList.remove('is-open');
 }
 nav.addEventListener('click', event => { if (event.target.closest('a')) closeMenu(); });
@@ -83,4 +83,27 @@ document.addEventListener('keydown', event => {
     closeMenu();
     menu.focus();
   }
+});
+
+
+const themeToggle = document.querySelector('.theme-toggle');
+const themeColor = document.querySelector('meta[name="theme-color"]');
+
+function updateThemeToggle() {
+  const light = document.documentElement.dataset.theme === 'light';
+  themeToggle.setAttribute('aria-pressed', String(light));
+  themeToggle.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+  themeToggle.querySelector('span').textContent = light ? '☾' : '☀';
+  themeColor.setAttribute('content', light ? '#f8f5ef' : '#191919');
+}
+
+themeToggle.hidden = false;
+updateThemeToggle();
+themeToggle.addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = theme;
+  try {
+    localStorage.setItem('portfolio-theme', theme);
+  } catch {}
+  updateThemeToggle();
 });
